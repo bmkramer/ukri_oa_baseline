@@ -14,8 +14,8 @@ FROM `ukri-oa-baseline.intermediate.ukri_uk_2012_2022_corpus`
 ),
 
 --- STEP 1B - Aggregate usage counts from IRUS_UK (collected separately through web UI)
---- Usage metrics were collected through IRUS_UK web UI, for all items with type 'article' in repositories included in IRUS_UK which saw at least one type of usage () in the period Jan-Dec 2023
---- Counts are per repository item, so need to be aggregated by DOI (as the sae DOI can be included in multiple repositories)
+--- Usage metrics were collected through IRUS_UK web UI, for all items with type 'article' in repositories included in IRUS_UK which saw at least one type of usage (views or downloads) in the period Jan-Dec 2023
+--- Counts are per repository item, so need to be aggregated by DOI (as the same DOI can be included in multiple repositories)
 
 TABLE_IRUS_AGG AS
 
