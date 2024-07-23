@@ -10,12 +10,13 @@ The repository contains SQL scripts used to collect bibliographic metadata of UK
 
 This project makes use of **Curtin Open Knowledge Initiative (COKI)** infrastructure, which is documented on GitHub: https://github.com/The-Academic-Observatory. Here, a number of open data sources (including Crossref, OpenAlex and Unpaywall) are ingested into a **Google Big Query** environment, which can then be queried via SQL. Additional data sources can be ingested manually, and similarly queried via SQL.
 
+## Data sources  
 The scripts use the following data sources included in the COKI Google Big Query environment:
 
 - **Crossref Metadata Plus** (data snapshot 2023-10-31), provided by Crossref (see https://www.crossref.org/services/metadata-retrieval/metadata-plus/)
 - **OpenAlex** (data snapshot 2023-10-18), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot)
 - **Unpaywall** (data snapshot 2023-11-27), provided by OurResearch (see https://unpaywall.org/products/data-feed)
-- ** Crossref Event Data (data snapshot ), provided by Crossref 
+- **Crossref Event Data** (data snapshot 2023-04-01), provided by Crossref (NB The Crossref Event Data API is scheduled to be [replaced](https://community.crossref.org/t/relationships-endpoint-update-and-event-data-api-sunsetting/4214) by the Relationships API in the near future) 
 
 In addition, the following supplementary open data sources were manually added to the Google Big Query environment for this project:
 
