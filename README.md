@@ -6,13 +6,15 @@ Code documented here is used to generate the dataset accompanying the 2024 repor
 Report:  
 Dataset: 
 
-The repository contains SQL scripts used to collect bibliographic metadata of UKRI-funded and UK-affiliated research output (journal articles only) published between 2012 and 2022, as well as data on open access availability, publisher, national and international collaborations, citations, views and downloads, and altmetrics.
+The repository contains SQL scripts used to collect bibliographic metadata of UKRI-funded and UK-affiliated research output (journal articles only) published between 2012 and 2022, as well as data on open access availability, publisher, national and international collaborations, citations, views and downloads, and altmetrics. 
 
-This project makes use of Curtin Open Knowledge Initiative (COKI) infrastructure, which is documented on GitHub: https://github.com/The-Academic-Observatory. Here, a number of open data sources (including Crossref, OpenAlex and Unpaywall) are ingested into a Google Big Query environment, which can then be queried via SQL.
+This project makes use of Curtin Open Knowledge Initiative (COKI) infrastructure, which is documented on GitHub: https://github.com/The-Academic-Observatory. Here, a number of open data sources (including Crossref, OpenAlex and Unpaywall) are ingested into a Google Big Query environment, which can then be queried via SQL. Additional data sources can be ingested manually, and similarly queried via SQL.
 
-The scripts use the following data sources:
-OpenAlex (data snapshot 2023-12-23), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot), ingested by COKI in Google Big Query
-OpenAIRE (data snapshot 2024-01-16), provided by OpenAIRE via Zenodo , ingested by COKI in Google Big QUery
+The scripts use the following data sources included in the COKI Google Big Query environment:
+
+- Crossref Metadata Plus (data snapshot 2023-10-31), provided by Crossref (see https://www.crossref.org/services/metadata-retrieval/metadata-plus/)
+- OpenAlex (data snapshot 2023-10-18), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot)
+- Unpaywall (data snapshot 2023-11-27), provided by OurResearch (see https://unpaywall.org/products/data-feed)
 list of identifiers (ROR ID, OpenAlex ID, OpenAIRE ID) of Dutch research performing organisations - included in project dataset
 
 
