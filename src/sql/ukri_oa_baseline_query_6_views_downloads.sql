@@ -25,7 +25,7 @@ UPPER(DOI) as DOI,
 SUM(IF(Metric_Type = "Unique_Item_Requests", Reporting_Period_Total, 0)) as unique_item_requests_sum,
 SUM(IF(Metric_Type = "Unique_Item_Investigations", Reporting_Period_Total, 0)) as unique_item_investigations_sum,
 
-FROM `ukri-oa-baseline.supplementary_sources.irus_uk_20240303`
+FROM `ukri-oa-baseline.supplementary_sources.irus_uk_dois_20240303`
 WHERE Item_Type = "Article" AND DOI is not null
 
 GROUP BY DOI
