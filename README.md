@@ -18,7 +18,8 @@ The scripts use the following data sources included in the COKI Google Big Query
 - **Unpaywall** (data snapshot 2023-11-27), provided by OurResearch (see https://unpaywall.org/products/data-feed)
 - **Crossref Event Data** (data snapshot 2023-04-01), provided by Crossref (NB The Crossref Event Data API is scheduled to be [replaced](https://community.crossref.org/t/relationships-endpoint-update-and-event-data-api-sunsetting/4214) by the Relationships API in the near future) 
 
-In addition, the following supplementary open data sources were manually added to the Google Big Query environment for this project:
+In addition, a number of supplementary open data sources were manually added to the Google Big Query environment for this project. 
+These are included in this repository in the folder [supplementary_sources](/supplementary_sources)
 
 - **Gateway to Research** - data on UKRI-funded publications for publication years 2012-2022 (13 csv files), downloaded from Gateway to Research web UI (https://gtr.ukri.org/) between 2023-11-05 and 2023-11-13
 - **Crossref member data** - Crossref member IDs and publisher names, created by querying Crossref member route API (https://api.crossref.org/swagger-ui/index.html#/Members) on 2024-01-23 (1 csv file)
