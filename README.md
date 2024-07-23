@@ -3,8 +3,8 @@
 Code documented here is used to generate the dataset accompanying the 2024 report  
 *"Monitoring and evaluation of UKRI's Open Access Policy: Exploring the use of open data sources to inform baseline values"*  
   
-Report:  
-Dataset: 
+Report:  [link tba]
+Dataset: [link tba]
 
 ## General description
 The repository contains SQL scripts used to collect bibliographic metadata of UKRI-funded and UK-affiliated research output (journal articles only) published between 2012 and 2022, as well as data on open access availability, publisher, national and international collaborations, citations, views and downloads, and altmetrics. 
