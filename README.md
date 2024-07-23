@@ -17,7 +17,7 @@ The scripts use the following data sources included in the COKI Google Big Query
 - **Crossref Metadata Plus** (data snapshot 2023-10-31), provided by Crossref (see https://www.crossref.org/services/metadata-retrieval/metadata-plus/)
 - **OpenAlex** (data snapshot 2023-10-18), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot)
 - **Unpaywall** (data snapshot 2023-11-27), provided by OurResearch (see https://unpaywall.org/products/data-feed)
-- **Crossref Event Data** (data snapshot 2023-04-01), provided by Crossref (see https://www.crossref.org/documentation/event-data/)  
+- **Crossref Event Data** (data snapshot 2023-04-01), provided by Crossref (see https://www.crossref.org/documentation/event-data/) and integrated in the aggregate DOI table in COKI Google Big Query  
 *(NB The Crossref Event Data API is scheduled to be [replaced](https://community.crossref.org/t/relationships-endpoint-update-and-event-data-api-sunsetting/4214) by the Relationships API in the near future)* 
 
 In addition, a number of supplementary open data sources were manually added to the Google Big Query environment for this project. 
@@ -29,29 +29,25 @@ These are included in this repository in the folder [supplementary_sources](/sup
 
 ## Workflow description
 
-The SQL scripts in this repository each generate an intermediate table in Google Big Query with the results of that particular query for each record in the dataset (bibliographic metadata, open access classfication, etc). The final SQL script combines all intermediate files by matching on DOIs. The resulting final dataset containing all variables can then be exported from Google Big Query as csv file. 
+The SQL scripts in this repository, when run in the COKI Google Big Query environment as described above, each generate an intermediate table in Google Big Query with the results of that particular query for each record in the dataset (bibliographic metadata, open access classfication, etc). The final SQL script combines all intermediate files by matching on DOIs. The resulting final dataset containing all variables can then be exported from Google Big Query as csv file. 
 
 All scripts are annotated to explain the different parts of the code. 
 
 ### Step 1 
 [ukri_oa_baseline_query_1_corpus.sql](/src/sql/ukri_oa_baseline_query_1_corpus.sql) - collect bibliographic metadata for UKRI-funded and UK-affiliated journal articles from Gateway to Research, Crossref and OpenAlex (limited to publications with Crossref DOI)
 ### Step 2
-[ukri_oa_baseline_query_2_oa_classification.sql](ukri_oa_baseline_query_2_oa_classification.sql) - for each record, collect open access information from Unpaywall
+[ukri_oa_baseline_query_2_oa_classification.sql](/src/sql/ukri_oa_baseline_query_2_oa_classification.sql) - for each record, collect open access information from Unpaywall
 ### Step 3
-[ukri_oa_baseline_query_3_publishers.sql](ukri_oa_baseline_query_3_publishers.sql) - for each record, collect publisher information from Crossref
+[ukri_oa_baseline_query_3_publishers.sql](/src/sql/ukri_oa_baseline_query_3_publishers.sql) - for each record, collect publisher information from Crossref
 ### Step 4
-[ukri_oa_baseline_query_4_collaborations.sql](ukri_oa_baseline_query_4_collaborations.sql) - for each record, collect information on national and international collaborations from OpenAlex
+[ukri_oa_baseline_query_4_collaborations.sql](/src/sql/ukri_oa_baseline_query_4_collaborations.sql) - for each record, collect information on national and international collaborations from OpenAlex
 ### Step 5
-[ukri_oa_baseline_query_5_citations.sql](ukri_oa_baseline_query_5_citations.sql) - for each record, collect citation information from OpenAlex
+[ukri_oa_baseline_query_5_citations.sql](/src/sql/ukri_oa_baseline_query_5_citations.sql) - for each record, collect citation information from OpenAlex
 ### Step 6
-[ukri_oa_baseline_query_6_views_downloads.sql](ukri_oa_baseline_query_6_views_downloads.sql) - for each record, collect usage information (views and downloads) from IRUS-UK
+[ukri_oa_baseline_query_6_views_downloads.sql](/src/sql/ukri_oa_baseline_query_6_views_downloads.sql) - for each record, collect usage information (views and downloads) from IRUS-UK
 ### Step 7
-[ukri_oa_baseline_query_7_event_data.sql](ukri_oa_baseline_query_7_event_data.sql) - for each record, collect altmetrics information (Twitter, newsfeeds, Reddit links, Wikipedia) from Crossref Event Data
+[ukri_oa_baseline_query_7_event_data.sql](/src/sql/ukri_oa_baseline_query_7_event_data.sql) - for each record, collect altmetrics information (Twitter, newsfeeds, Reddit links, Wikipedia) from Crossref Event Data
 ### Step 8
-[ukri_oa_baseline_query_8_fields.sql](ukri_oa_baseline_query_8_fields.sql) - for each record, collect subject classification from OpenAlex
+[ukri_oa_baseline_query_8_fields.sql](/src/sql/ukri_oa_baseline_query_8_fields.sql) - for each record, collect subject classification from OpenAlex
 ### Step 9
-[ukri_oa_baseline_query_9_combine_data.sql](ukri_oa_baseline_query_9_combine_data.sql) - combine all intermediate files by matching on DOI
-
-
-
-
+[ukri_oa_baseline_query_9_combine_data.sql](/src/sql/ukri_oa_baseline_query_9_combine_data.sql) - combine all intermediate files by matching on DOI
