@@ -8,7 +8,7 @@ Dataset: https://doi.org/10.5281/zenodo.12801805 [not live yet]
 
 
 ## General description
-The repository contains SQL scripts used to collect bibliographic metadata of UKRI-funded and UK-affiliated research output (journal articles only) published between 2012 and 2022, as well as data on open access availability, publisher, national and international collaborations, citations, views and downloads, and altmetrics. 
+The repository contains SQL scripts used to collect bibliographic metadata of UKRI-funded and UK-affiliated research output (journal articles only) published between 2012 and 2022, as well as data on open access availability, publisher, national and international collaborations, citations, views and downloads, altmetrics and subjects (fields). 
 
 This project makes use of **Curtin Open Knowledge Initiative (COKI)** infrastructure, which is documented on GitHub: https://github.com/The-Academic-Observatory. Here, a number of open data sources (including Crossref, OpenAlex and Unpaywall) are ingested into a **Google Big Query** environment, which can then be queried via SQL. Additional data sources can be ingested manually, and similarly queried via SQL.
 
