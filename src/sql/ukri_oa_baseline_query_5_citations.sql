@@ -1,5 +1,5 @@
 ---------------------------------
---- Collaborations
+--- Citations
 ---------------------------------
 
 --- STEP 1A - Take DOIs from corpus
