@@ -15,13 +15,13 @@ The scripts use the following data sources included in the COKI Google Big Query
 - **Crossref Metadata Plus** (data snapshot 2023-10-31), provided by Crossref (see https://www.crossref.org/services/metadata-retrieval/metadata-plus/)
 - **OpenAlex** (data snapshot 2023-10-18), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot)
 - **Unpaywall** (data snapshot 2023-11-27), provided by OurResearch (see https://unpaywall.org/products/data-feed)
-list of identifiers (ROR ID, OpenAlex ID, OpenAIRE ID) of Dutch research performing organisations - included in project dataset
+- ** Crossref Event Data (data snapshot ), provided by Crossref 
 
-In additional, the following supplementary open data sources were manually added to the Google Big Query environment for this project:
+In addition, the following supplementary open data sources were manually added to the Google Big Query environment for this project:
 
-- **Gateway to Research** - data on UKRI-funded publications for publication years 2012-2022 (13 csv files, zipped), downloaded from Gateway to Research web UI (https://gtr.ukri.org/) between 2023-11-05 and 2023-11-13
-- **Crossref member data** - Crossref member IDs and publisher names, created by querying Crossref member route API on (1 csv file)
-- **IRUS UK data" - 
+- **Gateway to Research** - data on UKRI-funded publications for publication years 2012-2022 (13 csv files), downloaded from Gateway to Research web UI (https://gtr.ukri.org/) between 2023-11-05 and 2023-11-13
+- **Crossref member data** - Crossref member IDs and publisher names, created by querying Crossref member route API (https://api.crossref.org/swagger-ui/index.html#/Members) on 2024-01-23 (1 csv file)
+- **IRUS UK data** - Usage metrics collected through IRUS_UK web UI (https://irus.jisc.ac.uk/r5/report/item/irus_ir_master/) on 2023-04-03, for all items with type 'article' in repositories included in IRUS UK which saw at least one type of usage (views or downloads) in the period Jan-Dec 2023 (1 csv file, zipped)
 
 
 
