@@ -31,29 +31,27 @@ These are included in this repository in the folder [supplementary_sources](/sup
 
 The SQL scripts in this repository each generate an intermediate table in Google Big Query with the results of that particular query for each record in the dataset (bibliographic metadata, open access classfication, etc). The final SQL script combines all intermediate files by matching on DOIs. The resulting final dataset containing all variables can then be exported from Google Big Query as csv file. 
 
+All scripts are annotated to explain the different parts of the code. 
+
 ### Step 1 
+ukri_oa_baseline_query_1_corpus.sql - collect bibliographic metadata for UKRI-funded and UK-affiliated journal articles from Gateway to Research, Crossref and OpenAlex
 ### Step 2
+ukri_oa_baseline_query_2_oa_classification.sql - for each record, collect open access information from Unpaywall
 ### Step 3
+ukri_oa_baseline_query_3_publishers.sql - for each record, collect publisher information from Crossref
 ### Step 4
+ukri_oa_baseline_query_4_collaborations.sql - for each record, collect information on national and international collaborations from OpenAlex
 ### Step 5
+ukri_oa_baseline_query_5_citations.sql - for each record, collect citation information from OpenAlex
 ### Step 6
+ukri_oa_baseline_query_6_views_downloads.sql - for each record, collect usage information (views and downloads) from IRUS-UK
 ### Step 7
+ukri_oa_baseline_query_7_event_data.sql - for each record, collect altmetrics information (Twitter, newsfeeds, Reddit links, Wikipedia) from Crossref Event Data
 ### Step 8
+ukri_oa_baseline_query_8_fields.sql - for each record, collect subject classification from OpenAlex
 ### Step 9
+ukri_oa_baseline_query_9_combine_data.sql - combine all 
 
 
 
 
-The repository contains 2 SQL scripts:
-
-openalex_works_20231223_rpo_nl_2022.sql
-openaire_products_20240116_rpo_nl_2022.sql
-These scripts are used to collect record-level data of research putput retrieved from OpenAlex and OpenAIRE, respectively, for all Dutch research performing organizations (RPOs) in scope of the pilot (UNL/NFU, NWO-i, KNAW, VH) for publication year 2022.
-
-The pilot has made use of Curtin Open Knowledge Initiative (COKI) infrastructure, which is documented on GitHub: https://github.com/The-Academic-Observatory. Here, a number of open data sources (including Crossref, OpenAlex and OpenAIRE) are ingested into a Google Big Query environment, which can then be queried via SQL.
-
-In particular,the scripts use the following data sources:
-
-OpenAlex (data snapshot 2023-12-23), provided by OurResearch via Amazon AWS (see https://docs.openalex.org/download-all-data/openalex-snapshot), ingested by COKI in Google Big Query
-OpenAIRE (data snapshot 2024-01-16), provided by OpenAIRE via Zenodo , ingested by COKI in Google Big QUery
-list of identifiers (ROR ID, OpenAlex ID, OpenAIRE ID) of Dutch research performing organisations - included in project dataset
