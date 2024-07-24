@@ -38,4 +38,4 @@ USING(doi)
 
 ORDER BY doi
 
---- saved as `ukri-oa-baseline.final.ukri_uk_2012_2022_full_dataset_v1`
+--- saved as `ukri-oa-baseline.final.ukri_uk_2012_2022_articles_dataset_v1`
