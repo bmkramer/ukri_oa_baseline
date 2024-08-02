@@ -25,7 +25,7 @@ In addition, a number of supplementary open data sources were manually added to 
 These are included in this repository in the folder [supplementary_sources](/supplementary_sources)
 
 - **Gateway to Research** - data on UKRI-funded publications for publication years 2012-2022 (11 csv files), downloaded from Gateway to Research web UI (https://gtr.ukri.org/) between 2023-11-05 and 2023-11-13. 
-Data made available by UKRI under an [Open Government License (OGL)](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+Data made available by UKRI under an [Open Government Licence (OGL)](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 - **Crossref member data** - Crossref member IDs and publisher names, created by querying Crossref member route API (https://api.crossref.org/swagger-ui/index.html#/Members) on 2024-01-23 (1 csv file).
 - **IRUS UK data** - Usage metrics collected through IRUS_UK web UI (https://irus.jisc.ac.uk/r5/report/item/irus_ir_master/) on 2023-04-03, for all items with type 'article' in repositories included in IRUS UK which saw at least one type of usage (views or downloads) in the period Jan-Dec 2023 (1 csv file, zipped).
 
